@@ -59,7 +59,7 @@ AWK = mawk
 CC = gcc
 CCDEPMODE = depmode=none
 CFLAGS = -O3 -Wall 
-CHARSET = utf8
+CHARSET = euc
 CPP = gcc -E
 CPPFLAGS = 
 CXX = g++

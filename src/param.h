@@ -66,11 +66,39 @@ class Param {
 
   template <class T>
   T get(const char *key) const {
+
+	  //debug
+	std::cout << "[" << __FILE__ << ":" << __LINE__ << "]: ";
+//	std::cout << "key=" + key << std::endl
+//	std::cout << "key=" + *key << std::endl;
+//	std::cout << *key << std::endl;
+	printf("key=%s\n", key);
+	///
+
+	  //debug
+	std::cout << "[" << __LINE__ << "]: " << __FILE__ <<
+			"Param::get()" << std::endl;
+
+	///
+
     std::map<std::string, std::string>::const_iterator it = conf_.find(key);
     if (it == conf_.end()) {
+
+    	//debug
+    	//debug
+		std::cout << "[" << __FILE__ << ":" << __LINE__ << "]: " << std::endl;
+		std::cout << "it == conf_.end()" << std::endl;
+
       scoped_ptr<T> r(new T());
       return *r;
     }
+    //debug
+    else {
+		std::cout << "[" << __FILE__ << ":" << __LINE__ << "]: " << std::endl;
+		std::cout << "it != conf_.end()" << std::endl;
+    }
+
+	///
     return lexical_cast<T, std::string>(it->second);
   }
 
@@ -84,7 +112,13 @@ class Param {
 
   void dump_config(std::ostream *os) const;
 
-  explicit Param() {}
+  explicit Param() {
+
+	  //debug
+	  std::cout << "[" << __LINE__ << "]: " << __FILE__ << std::endl;
+
+	  ///
+  }
   virtual ~Param() {}
 };
 }

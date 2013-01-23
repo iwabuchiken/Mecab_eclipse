@@ -6,6 +6,20 @@
 #include "mecab.h"
 #include "winmain.h"
 
+//debug
+#include <iostream>
+///
+
 int main(int argc, char **argv) {
+
+	//debug
+//	std::cout << "[" <<;
+//	std::cout << __LINE__ <<;
+//	std::cout << "]: " <<;
+//	std::cout << __FILE__ << std::endl;
+	std::cout << "[" << __LINE__ << "]: " << __FILE__ << std::endl;
+
+	///
+
   return mecab_do (argc, argv);
 }

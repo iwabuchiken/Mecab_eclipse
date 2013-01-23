@@ -997,10 +997,20 @@ void deleteLattice(Lattice *lattice) {
 }  // MeCab
 
 int mecab_do(int argc, char **argv) {
+
+	//debug
+	std::cout << "[" << __LINE__ << "]: " << __FILE__ << std::endl;
+	///
+
 #define WHAT_ERROR(msg) do {                    \
     std::cout << msg << std::endl;              \
     return EXIT_FAILURE; }                      \
   while (0);
+
+//	//debug
+//	std::cout << "[" << __LINE__ << "]: " << __FILE__ << std::endl;
+//	WHAT_ERROR("ABCDE");
+//	///
 
   MeCab::Param param;
   if (!param.open(argc, argv, MeCab::long_options)) {
@@ -1027,6 +1037,14 @@ int mecab_do(int argc, char **argv) {
     std::cerr << "lattice-level is DEPERCATED. "
               << "use --marginal or --nbest." << std::endl;
   }
+
+  	//debug
+	std::cout << "[" << __LINE__ << "]: " << __FILE__ << std::endl;
+	int dbg = param.get<int>("lattice-level");
+
+	std::cout << "	param.get<int>(\"lattice-level\") => " << dbg << std::endl;
+
+	///
 
   MeCab::scoped_ptr<MeCab::ModelImpl> model(new MeCab::ModelImpl);
   if (!model->open(param)) {
