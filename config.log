@@ -557,7 +557,7 @@ configure:16044: checking for shared library run path origin
 configure:16057: result: done
 configure:16635: checking for iconv
 configure:16657: gcc -o conftest -g -O2   conftest.c  >&5
-/tmp/ccJBpiXv.o: In function `main':
+/tmp/ccurX0pM.o: In function `main':
 /home/iwabuchiken/ws/ws_eclipse/Mecab_eclipse/conftest.c:28: undefined reference to `libiconv_open'
 /home/iwabuchiken/ws/ws_eclipse/Mecab_eclipse/conftest.c:29: undefined reference to `libiconv'
 /home/iwabuchiken/ws/ws_eclipse/Mecab_eclipse/conftest.c:30: undefined reference to `libiconv_close'

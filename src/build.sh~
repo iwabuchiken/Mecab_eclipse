@@ -1,0 +1,5 @@
+#!/bin/bash
+
+make > make_20130123_200354.log
+sudo make install > install_20130123_200354.log
+

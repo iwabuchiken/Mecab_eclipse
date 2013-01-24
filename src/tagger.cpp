@@ -999,7 +999,8 @@ void deleteLattice(Lattice *lattice) {
 int mecab_do(int argc, char **argv) {
 
 	//debug
-	std::cout << "[" << __LINE__ << "]: " << __FILE__ << std::endl;
+	std::cout << "[" << __LINE__ << "]: "
+			<< "mecab_do(int argc, char **argv)" << __FILE__ << std::endl;
 	///
 
 #define WHAT_ERROR(msg) do {                    \

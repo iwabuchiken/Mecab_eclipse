@@ -290,10 +290,24 @@ int load_request_type(const Param &param) {
 }
 
 bool load_dictionary_resource(Param *param) {
+
+	//debug
+	std::cout << "[" << __FILE__ << ":" << __LINE__ << "]: "
+			<< "load_dictionary_resource(Param *param)" << std::endl;
+
+	///
+
   std::string rcfile = param->get<std::string>("rcfile");
 
 #ifdef HAVE_GETENV
   if (rcfile.empty()) {
+
+	  //debug
+	std::cout << "[" << __FILE__ << ":" << __LINE__ << "]: "
+			<< "rcfile.empty()" << std::endl;
+
+	///
+
     const char *homedir = getenv("HOME");
     if (homedir) {
       const std::string s = MeCab::create_filename(std::string(homedir),

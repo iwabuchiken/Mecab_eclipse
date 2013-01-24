@@ -17,7 +17,16 @@ int main(int argc, char **argv) {
 //	std::cout << __LINE__ <<;
 //	std::cout << "]: " <<;
 //	std::cout << __FILE__ << std::endl;
-	std::cout << "[" << __LINE__ << "]: " << __FILE__ << std::endl;
+//	std::cout << "[" << __LINE__ << "]: " << __FILE__ << std::endl;
+	//debug
+	std::cout << "[" << __FILE__ << ":" << __LINE__ << "]: " << "main()" << std::endl;
+
+//	//debug
+//	std::cout << "[" << __FILE__ << ":" << __LINE__ << "]: "
+//			<< "BBBBBBBBBBBBBBBBBBBBBBB" << std::endl;
+//
+//	///
+	///
 
 	///
 

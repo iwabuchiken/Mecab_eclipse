@@ -1,0 +1,47 @@
+make  all-recursive
+make[1]: ディレクトリ `/home/iwabuchiken/ws/ws_eclipse/Mecab_eclipse' に入ります
+Making all in src
+make[2]: ディレクトリ `/home/iwabuchiken/ws/ws_eclipse/Mecab_eclipse/src' に入ります
+/bin/bash ../libtool --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I.. -DDIC_VERSION=102   -DMECAB_DEFAULT_RC="\"/usr/local/etc/mecabrc\""    -O3 -Wall  -c -o tagger.lo tagger.cpp
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I.. -DDIC_VERSION=102 -DMECAB_DEFAULT_RC=\"/usr/local/etc/mecabrc\" -O3 -Wall -c tagger.cpp  -fPIC -DPIC -o .libs/tagger.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I.. -DDIC_VERSION=102 -DMECAB_DEFAULT_RC=\"/usr/local/etc/mecabrc\" -O3 -Wall -c tagger.cpp -o tagger.o >/dev/null 2>&1
+/bin/bash ../libtool --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I.. -DDIC_VERSION=102   -DMECAB_DEFAULT_RC="\"/usr/local/etc/mecabrc\""    -O3 -Wall  -c -o utils.lo utils.cpp
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I.. -DDIC_VERSION=102 -DMECAB_DEFAULT_RC=\"/usr/local/etc/mecabrc\" -O3 -Wall -c utils.cpp  -fPIC -DPIC -o .libs/utils.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I.. -DDIC_VERSION=102 -DMECAB_DEFAULT_RC=\"/usr/local/etc/mecabrc\" -O3 -Wall -c utils.cpp -o utils.o >/dev/null 2>&1
+/bin/bash ../libtool --tag=CXX   --mode=link g++  -O3 -Wall  -no-undefined -version-info 2:0:0  -o libmecab.la -rpath /usr/local/lib viterbi.lo tagger.lo utils.lo eval.lo iconv_utils.lo dictionary_rewriter.lo dictionary_generator.lo dictionary_compiler.lo context_id.lo connector.lo nbest_generator.lo writer.lo string_buffer.lo param.lo tokenizer.lo char_property.lo dictionary.lo feature_index.lo lbfgs.lo learner_tagger.lo learner.lo libmecab.lo  -liconv -lpthread -lpthread  -lstdc++
+libtool: link: rm -fr  .libs/libmecab.a .libs/libmecab.la .libs/libmecab.lai .libs/libmecab.so .libs/libmecab.so.2 .libs/libmecab.so.2.0.0
+libtool: link: g++  -fPIC -DPIC -shared -nostdlib /usr/lib/gcc/i686-linux-gnu/4.7/../../../i386-linux-gnu/crti.o /usr/lib/gcc/i686-linux-gnu/4.7/crtbeginS.o  .libs/viterbi.o .libs/tagger.o .libs/utils.o .libs/eval.o .libs/iconv_utils.o .libs/dictionary_rewriter.o .libs/dictionary_generator.o .libs/dictionary_compiler.o .libs/context_id.o .libs/connector.o .libs/nbest_generator.o .libs/writer.o .libs/string_buffer.o .libs/param.o .libs/tokenizer.o .libs/char_property.o .libs/dictionary.o .libs/feature_index.o .libs/lbfgs.o .libs/learner_tagger.o .libs/learner.o .libs/libmecab.o   -liconv -lpthread -L/usr/lib/gcc/i686-linux-gnu/4.7 -L/usr/lib/gcc/i686-linux-gnu/4.7/../../../i386-linux-gnu -L/usr/lib/gcc/i686-linux-gnu/4.7/../../../../lib -L/lib/i386-linux-gnu -L/lib/../lib -L/usr/lib/i386-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/i686-linux-gnu/4.7/../../.. -lstdc++ -lm -lc -lgcc_s /usr/lib/gcc/i686-linux-gnu/4.7/crtendS.o /usr/lib/gcc/i686-linux-gnu/4.7/../../../i386-linux-gnu/crtn.o  -O3   -Wl,-soname -Wl,libmecab.so.2 -o .libs/libmecab.so.2.0.0
+libtool: link: (cd ".libs" && rm -f "libmecab.so.2" && ln -s "libmecab.so.2.0.0" "libmecab.so.2")
+libtool: link: (cd ".libs" && rm -f "libmecab.so" && ln -s "libmecab.so.2.0.0" "libmecab.so")
+libtool: link: ar cru .libs/libmecab.a  viterbi.o tagger.o utils.o eval.o iconv_utils.o dictionary_rewriter.o dictionary_generator.o dictionary_compiler.o context_id.o connector.o nbest_generator.o writer.o string_buffer.o param.o tokenizer.o char_property.o dictionary.o feature_index.o lbfgs.o learner_tagger.o learner.o libmecab.o
+libtool: link: ranlib .libs/libmecab.a
+libtool: link: ( cd ".libs" && rm -f "libmecab.la" && ln -s "../libmecab.la" "libmecab.la" )
+g++ -DHAVE_CONFIG_H -I. -I.. -DDIC_VERSION=102   -DMECAB_DEFAULT_RC="\"/usr/local/etc/mecabrc\""    -O3 -Wall  -c -o mecab.o mecab.cpp
+/bin/bash ../libtool --tag=CXX   --mode=link g++  -O3 -Wall    -o mecab mecab.o libmecab.la -liconv -lpthread -lpthread  -lstdc++
+libtool: link: g++ -O3 -Wall -o .libs/mecab mecab.o  ./.libs/libmecab.so -liconv -lpthread -lstdc++
+/bin/bash ../libtool --tag=CXX   --mode=link g++  -O3 -Wall    -o mecab-dict-index mecab-dict-index.o libmecab.la -liconv -lpthread -lpthread  -lstdc++
+libtool: link: g++ -O3 -Wall -o .libs/mecab-dict-index mecab-dict-index.o  ./.libs/libmecab.so -liconv -lpthread -lstdc++
+/bin/bash ../libtool --tag=CXX   --mode=link g++  -O3 -Wall    -o mecab-dict-gen mecab-dict-gen.o libmecab.la -liconv -lpthread -lpthread  -lstdc++
+libtool: link: g++ -O3 -Wall -o .libs/mecab-dict-gen mecab-dict-gen.o  ./.libs/libmecab.so -liconv -lpthread -lstdc++
+/bin/bash ../libtool --tag=CXX   --mode=link g++  -O3 -Wall    -o mecab-cost-train mecab-cost-train.o libmecab.la -liconv -lpthread -lpthread  -lstdc++
+libtool: link: g++ -O3 -Wall -o .libs/mecab-cost-train mecab-cost-train.o  ./.libs/libmecab.so -liconv -lpthread -lstdc++
+/bin/bash ../libtool --tag=CXX   --mode=link g++  -O3 -Wall    -o mecab-system-eval mecab-system-eval.o libmecab.la -liconv -lpthread -lpthread  -lstdc++
+libtool: link: g++ -O3 -Wall -o .libs/mecab-system-eval mecab-system-eval.o  ./.libs/libmecab.so -liconv -lpthread -lstdc++
+/bin/bash ../libtool --tag=CXX   --mode=link g++  -O3 -Wall    -o mecab-test-gen mecab-test-gen.o libmecab.la -liconv -lpthread -lpthread  -lstdc++
+libtool: link: g++ -O3 -Wall -o .libs/mecab-test-gen mecab-test-gen.o  ./.libs/libmecab.so -liconv -lpthread -lstdc++
+make[2]: ディレクトリ `/home/iwabuchiken/ws/ws_eclipse/Mecab_eclipse/src' から出ます
+Making all in man
+make[2]: ディレクトリ `/home/iwabuchiken/ws/ws_eclipse/Mecab_eclipse/man' に入ります
+make[2]: `all' に対して行うべき事はありません.
+make[2]: ディレクトリ `/home/iwabuchiken/ws/ws_eclipse/Mecab_eclipse/man' から出ます
+Making all in doc
+make[2]: ディレクトリ `/home/iwabuchiken/ws/ws_eclipse/Mecab_eclipse/doc' に入ります
+make[2]: `all' に対して行うべき事はありません.
+make[2]: ディレクトリ `/home/iwabuchiken/ws/ws_eclipse/Mecab_eclipse/doc' から出ます
+Making all in tests
+make[2]: ディレクトリ `/home/iwabuchiken/ws/ws_eclipse/Mecab_eclipse/tests' に入ります
+make[2]: `all' に対して行うべき事はありません.
+make[2]: ディレクトリ `/home/iwabuchiken/ws/ws_eclipse/Mecab_eclipse/tests' から出ます
+make[2]: ディレクトリ `/home/iwabuchiken/ws/ws_eclipse/Mecab_eclipse' に入ります
+make[2]: ディレクトリ `/home/iwabuchiken/ws/ws_eclipse/Mecab_eclipse' から出ます
+make[1]: ディレクトリ `/home/iwabuchiken/ws/ws_eclipse/Mecab_eclipse' から出ます

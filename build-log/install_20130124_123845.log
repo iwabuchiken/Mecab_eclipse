@@ -1,0 +1,5 @@
+Making install in src
+make[1]: ディレクトリ `/home/iwabuchiken/ws/ws_eclipse/Mecab_eclipse/src' に入ります
+/bin/bash ../libtool --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I.. -DDIC_VERSION=102   -DMECAB_DEFAULT_RC="\"/usr/local/etc/mecabrc\""    -O3 -Wall  -c -o param.lo param.cpp
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I.. -DDIC_VERSION=102 -DMECAB_DEFAULT_RC=\"/usr/local/etc/mecabrc\" -O3 -Wall -c param.cpp  -fPIC -DPIC -o .libs/param.o
+make[1]: ディレクトリ `/home/iwabuchiken/ws/ws_eclipse/Mecab_eclipse/src' から出ます
