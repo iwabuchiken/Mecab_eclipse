@@ -29,7 +29,7 @@ for arg in $@; do
 #	if $flag = "-T"; then
 #	if $flag="-T"; then
 	if [ "$flag" == "-T" ]; then
-		file_name=`echo $arg|cut -d "=" -f 2`
+		file_name=`echo $arg|cut -d "=" -f 2`	
 		touch $file_name
 		echo "$file_name => Touched"
 	fi

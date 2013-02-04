@@ -54,7 +54,7 @@ done
 
 ############## Execute make
 if [ $dflag -eq 0 ]; then
-	echo "Starting "make"
+	echo "Starting make"
 	make > build-log/make_$time_label.log
 	echo "Starting make istall"
 	sudo make install > build-log/install_$time_label.log
